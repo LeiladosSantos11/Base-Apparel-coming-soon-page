@@ -1,0 +1,276 @@
+
+/* #region globals: *, html, body, h1-6, p */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+line-height: var(--lineHeight);
+font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+
+/*-------------------/***@MediaQuery on Header Session***-----------*/
+ /* For mobile phones: */
+
+ 
+  @media (min-width: 250px) and (max-width: 768px) {
+  .container {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.7fr;
+  gap: 0px 0px;
+  grid-template-areas: 
+  "header"
+  "hero"
+  "wrapper";
+	}
+
+
+.header {
+  padding: 0.5em;
+}
+
+#logo{ 
+  display: none;
+}
+
+.wrapper {
+  margin-left: 0.5rem;
+}
+
+.subtitle {
+  padding: 0;
+  color: rgba(66, 58, 58, 1);
+  font-size: 3em;
+  font-weight: 400;
+}
+
+text {
+  margin-right: 0.5rem;
+  padding: 5rem 0;
+}
+
+.hero img {
+  height: 75vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  padding-top: 2rem;
+  font-size: 3em;
+  color: rgba(206, 152, 152, 1);
+  font-weight: 300;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  color: rgba(66, 58, 58, 1);
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.message {
+  color:rgba(206, 152, 152, 1);
+  margin-left: 0.5rem;
+  padding: 2rem 0.5rem 2rem 0;   
+  line-height: 1.5rem;
+}
+
+.attribution {
+  padding-top: 4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.emailBtn{
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 15px;
+  user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+  border-color: hsl(0, 93%, 68%);
+  border-radius: 36px;
+  border-width: 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+  width: 50%;
+}
+
+#btn {
+  display: inline-flex;
+  background-color: rgba(248, 191, 191, 1);
+  border-radius: 46px;
+  cursor: pointer;
+  color: white;
+  margin: 7px 0;
+  padding: 10px;
+  line-height: 1.3;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 0 -40px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  border-radius: 37px;
+  width: 18%;
+  border-color: rgba(248, 191, 191, 1);
+}
+
+p #message {
+  color:rgba(238, 139, 139, 1);
+  font-size: 0.8rem;
+}
+}
+
+/*-----------------*/
+
+  @media (min-width: 770px) {
+.container {
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-items: left;
+  }
+    
+.header {
+  display: none;
+  }
+
+.row-reverse { 
+  -webkit-flex-direction: row-reverse; 
+  flex-direction: row-reverse;
+  }  
+      
+#logo {
+  padding: 3rem 0;
+  }
+    
+.wrapper {
+  margin-left: 8rem;
+  }
+
+.text {
+  margin-left: 10em;
+  padding: 5rem 0;
+  }
+
+h1 {
+  padding-top: 6rem;
+  font-size: 4em;
+  color: rgba(206, 152, 152, 1);
+  font-weight: 300;
+  }
+    
+  .subtitle {
+  margin: 0;
+  padding: 0;
+  color: rgba(66, 58, 58, 1);
+  font-size: 4em;
+  font-weight: 500;
+  }
+    
+  .message {
+  color:rgba(206, 152, 152, 1);
+  margin-right: 15rem;
+  padding: 2rem 0;   
+  line-height: 1.5rem;
+  }
+    
+  .attribution {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    }
+    
+  .emailBtn{
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 15px;
+    user-select: none;
+    transition: all 150ms linear;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    text-transform: none;
+    text-transform: capitalize;
+    border-color: hsl(0, 93%, 68%);
+    border-radius: 36px;
+    border-width: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 160px;
+    width: 50%;
+    }
+    
+  #btn {
+    display: inline-flex;
+    background-color: rgba(248, 191, 191, 1);
+    border-radius: 46px;
+    cursor: pointer;
+    color: white;
+    margin: 7px 0;
+    padding: 10px;
+    line-height: 1.3;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 -40px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 150ms linear;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    border-radius: 37px;
+    width: 18%;
+    border-color: rgba(248, 191, 191, 1);
+    }
+    
+    #message {
+        color:rgba(238, 139, 139, 1);
+        font-size: 0.8rem;
+    }
+}
+  
